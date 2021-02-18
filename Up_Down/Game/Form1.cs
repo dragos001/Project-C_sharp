@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +16,7 @@ namespace Game
         public Form1()
         {
             InitializeComponent();
+
         }
 
 
@@ -24,7 +25,7 @@ namespace Game
             Random rnd = new Random();
 
             int dice = rnd.Next(1, 6);
-
+        
             lb_dice.Text = Convert.ToString(dice);
             for (byte i = 0; i < dice; i++)
             {
@@ -38,7 +39,7 @@ namespace Game
                 else
                 if (  pb_pion.Location.Y== 546 || pb_pion.Location.Y ==428 || pb_pion.Location.Y == 310 || pb_pion.Location.Y == 74 || pb_pion.Location.Y == 192)
                 {
-                    if (pb_pion.Location.X == 731)
+                    if (pb_pion.Location.X == 672)
                     {
                         this.SuspendLayout();
                         pb_pion.Location = new Point(pb_pion.Location.X, pb_pion.Location.Y - 59);
@@ -53,7 +54,7 @@ namespace Game
                 }
                 else
                 {
-                    if (pb_pion.Location.X == 200)
+                    if (pb_pion.Location.X == 200 )
                     {
                         this.SuspendLayout();
                         pb_pion.Location = new Point(pb_pion.Location.X, pb_pion.Location.Y - 59);
@@ -148,7 +149,7 @@ namespace Game
                 if (pb_pion.Location.X == 318 && pb_pion.Location.Y == 15)
             {
                 this.SuspendLayout();
-                pb_pion.Location = new Point(315, 133);
+                pb_pion.Location = new Point(318, 133);
                 this.ResumeLayout();
 
             }
@@ -196,7 +197,7 @@ namespace Game
                 if (pb_pion.Location.X == 436 && pb_pion.Location.Y == 251)
             {
                 this.SuspendLayout();
-                pb_pion.Location = new Point(513, 251);
+                pb_pion.Location = new Point(613, 251);
                 this.ResumeLayout();
 
             }
@@ -212,7 +213,7 @@ namespace Game
                 if (pb_pion.Location.X == 554 && pb_pion.Location.Y == 310)
             {
                 this.SuspendLayout();
-                pb_pion.Location = new Point(496, 428);
+                pb_pion.Location = new Point(495, 428);
                 this.ResumeLayout();
 
             }
@@ -227,37 +228,5 @@ namespace Game
 
         }
 
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.SuspendLayout();
-            pb_pion.Location = new Point(pb_pion.Location.X, pb_pion.Location.Y - 59);
-            this.ResumeLayout();
-            poz.Text = "X: " + Convert.ToString(pb_pion.Location.X) + " Y:" + Convert.ToString(pb_pion.Location.Y);
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            this.SuspendLayout();
-            pb_pion.Location = new Point(pb_pion.Location.X, pb_pion.Location.Y + 59);
-            this.ResumeLayout();
-            poz.Text = "X: " + Convert.ToString(pb_pion.Location.X) + " Y:" + Convert.ToString(pb_pion.Location.Y);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.SuspendLayout();
-            pb_pion.Location = new Point(pb_pion.Location.X-59, pb_pion.Location.Y);
-            this.ResumeLayout();
-            poz.Text = "X: " + Convert.ToString(pb_pion.Location.X) + " Y:" + Convert.ToString(pb_pion.Location.Y);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.SuspendLayout();
-            pb_pion.Location = new Point(pb_pion.Location.X+59, pb_pion.Location.Y);
-            this.ResumeLayout();
-            poz.Text = "X: " + Convert.ToString(pb_pion.Location.X) + " Y:" + Convert.ToString(pb_pion.Location.Y);
-        }
     }
 }
